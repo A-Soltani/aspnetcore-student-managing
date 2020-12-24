@@ -34,6 +34,8 @@ namespace StudentManaging.API
                 .AddInfrastructureServices(Configuration)
                 .AddMediatR(typeof(AddStudentCommandHandler))
                 .AddControllers();
+
+            SeedDb(services);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +60,13 @@ namespace StudentManaging.API
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private static void SeedDb(IServiceCollection services)
+        {
+            var serviceProvider = services.BuildServiceProvider();
+            var studentManagementDb = serviceProvider.GetRequiredService<StudentManagementContext>();
+            StudentManagementDbInitializer.Initialize(studentManagementDb);
         }
     }
 }

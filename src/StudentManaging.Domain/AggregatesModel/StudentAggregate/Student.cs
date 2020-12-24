@@ -5,9 +5,15 @@ namespace StudentManaging.Domain.AggregatesModel.StudentAggregate
 {
     public class Student : Entity, IAggregateRoot
     {
+        public int Id { get; private set; }
         public string Name { get; private set; }
         public Address Address { get; private set; }
         public string PhoneNumber { get; private set; }
+
+        public Student()
+        {
+            
+        }
 
         private Student(string name, Address address, string phoneNumber)
         {

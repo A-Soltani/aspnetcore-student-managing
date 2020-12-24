@@ -10,6 +10,11 @@ namespace StudentManaging.Domain.AggregatesModel.StudentAggregate
         public string Country { get; private set; }
         public string ZipCode { get; private set; }
 
+        public Address()
+        {
+            
+        }
+
         private Address(string street, string city, string state, string country, string zipcode)
         {
             Street = street;

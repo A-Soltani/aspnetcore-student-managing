@@ -17,9 +17,7 @@ namespace StudentManaging.Infrastructure.Repositories.EF.StudentManagement
             }
 
             var address = Address.AddAddress("Khayyam", "Tehran", "Tehran", "Iran", "1234567890");
-            context.Address.Add(address);
-
-            var student = Student.AddStudent("Majid", address, "00989122112567");
+            var student = Student.AddStudent("Majid Parsa", address, "00989122112567");
             context.Students.Add(student);
 
             context.SaveChanges();

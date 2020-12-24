@@ -18,6 +18,7 @@ namespace StudentManaging.API.Controllers
         public StudentController(IMediator mediator) => 
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
+        [HttpPost("Add")]
         public async Task<IActionResult> AddStudent([FromBody] AddStudentCommand addStudentCommand)
         {
             await _mediator.Send(addStudentCommand);
