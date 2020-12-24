@@ -6,7 +6,7 @@ namespace StudentManaging.Infrastructure.Repositories.EF.StudentManagement
 {
     public class StudentManagementDbInitializer
     {
-        public static void Initialize(StudentManagementDbContext context)
+        public static void Initialize(StudentManagementContext context)
         {
             context.Database.EnsureCreated();
 

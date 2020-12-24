@@ -1,7 +1,7 @@
 ﻿namespace StudentManaging.Domain.SeedWork
 {
-    public abstract class Entity<T>
+    public abstract class Entity
     {
-        public T Id { get; protected set; }
+
     }
 }

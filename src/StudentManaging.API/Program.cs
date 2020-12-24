@@ -29,7 +29,7 @@ namespace StudentManaging.API
                 var services = scope.ServiceProvider;
                 try
                 {
-                    var context = services.GetRequiredService<StudentManagementDbContext>();
+                    var context = services.GetRequiredService<StudentManagementContext>();
                     StudentManagementDbInitializer.Initialize(context);
                 }
                 catch (Exception ex)

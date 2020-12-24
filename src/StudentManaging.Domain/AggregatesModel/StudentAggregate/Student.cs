@@ -3,7 +3,7 @@ using StudentManaging.Domain.SeedWork;
 
 namespace StudentManaging.Domain.AggregatesModel.StudentAggregate
 {
-    public class Student : AggregateRoot<int>
+    public class Student : Entity, IAggregateRoot
     {
         public string Name { get; private set; }
         public Address Address { get; private set; }
