@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManaging.Infrastruct
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManaging.API", "StudentManaging.API\StudentManaging.API.csproj", "{7270A1BE-929B-42D6-BC13-592BAE6CDF95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentManaging.Application", "StudentManaging.Application\StudentManaging.Application.csproj", "{F4A0FF95-7B8B-4DB5-BE73-8B6D3E5079E0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{7270A1BE-929B-42D6-BC13-592BAE6CDF95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7270A1BE-929B-42D6-BC13-592BAE6CDF95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7270A1BE-929B-42D6-BC13-592BAE6CDF95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4A0FF95-7B8B-4DB5-BE73-8B6D3E5079E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4A0FF95-7B8B-4DB5-BE73-8B6D3E5079E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4A0FF95-7B8B-4DB5-BE73-8B6D3E5079E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4A0FF95-7B8B-4DB5-BE73-8B6D3E5079E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
