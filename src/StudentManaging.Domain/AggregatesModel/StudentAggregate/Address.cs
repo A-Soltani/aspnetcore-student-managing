@@ -10,7 +10,7 @@ namespace StudentManaging.Domain.AggregatesModel.StudentAggregate
         public string Country { get; private set; }
         public string ZipCode { get; private set; }
 
-        public Address(string street, string city, string state, string country, string zipcode)
+        private Address(string street, string city, string state, string country, string zipcode)
         {
             Street = street;
             City = city;
@@ -18,5 +18,8 @@ namespace StudentManaging.Domain.AggregatesModel.StudentAggregate
             Country = country;
             ZipCode = zipcode;
         }
+
+        public static Address AddAddress(string street, string city, string state, string country, string zipcode) =>
+            new Address(street, city, state, country, zipcode);
     }
 }
