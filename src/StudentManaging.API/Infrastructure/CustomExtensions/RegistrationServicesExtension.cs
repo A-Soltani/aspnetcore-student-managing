@@ -13,7 +13,7 @@ namespace StudentManaging.API.Infrastructure.CustomExtensions
             services.AddDbContext<StudentManagementContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("StudentManagementConnection")));
 
-            services.AddSingleton<IStudentRepository, StudentRepository>();
+            services.AddScoped<IStudentRepository, StudentRepository>();
 
             return services;
         }
