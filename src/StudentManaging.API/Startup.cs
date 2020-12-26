@@ -54,9 +54,9 @@ namespace StudentManaging.API
                 s.SwaggerEndpoint("/swagger/v1/swagger.json", "Student Managing API V1");
             });
 
-            app.UseRouting();
 
             app.UseAuthentication();
+            app.UseRouting();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
