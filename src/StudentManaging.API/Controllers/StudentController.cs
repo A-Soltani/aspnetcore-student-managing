@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using StudentManaging.Application.Commands;
@@ -18,6 +19,7 @@ namespace StudentManaging.API.Controllers
         public StudentController(IMediator mediator) => 
             _mediator = mediator ?? throw new ArgumentNullException(nameof(mediator));
 
+        [Authorize]
         [HttpPost("Add")]
         public async Task<IActionResult> AddStudent([FromBody] AddStudentCommand addStudentCommand)
         {
