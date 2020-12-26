@@ -42,6 +42,8 @@ namespace UserManaging.API.Services.Authentication
             var key = Encoding.ASCII.GetBytes(_appSettings.BearerToken.ServerSecret);
             var tokenDescriptor = new SecurityTokenDescriptor
             {
+                Issuer = _appSettings.BearerToken.Issuer,
+                Audience = _appSettings.BearerToken.Audience,
                 Subject = new ClaimsIdentity(new[] { new Claim("id", user.Id.ToString()) }),
                 Expires = DateTime.UtcNow.AddMinutes(_appSettings.BearerToken.AccessTokenExpirationMinutes),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

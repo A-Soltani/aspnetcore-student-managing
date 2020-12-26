@@ -25,7 +25,7 @@ namespace UserManaging.API.Infrastructure.CustomExtensions
                         ValidateIssuerSigningKey = true,
                         ValidIssuer = appSettings.BearerToken.Issuer,
                         ValidAudience = appSettings.BearerToken.Audience,
-                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(appSettings.BearerToken.ServerSecret))
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(appSettings.BearerToken.ServerSecret))
                     };
                 });
 
